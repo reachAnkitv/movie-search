@@ -3,7 +3,7 @@ let entry=document.querySelector("#enteredword");
 let showresult=document.querySelector("#result");
 let imgshowresult=document.querySelector("#imgresult");
 async function bring() {
-    let call=`http://www.omdbapi.com/?apikey=79c70a09&t=${entry.value}`;
+    let call=`https://www.omdbapi.com/?apikey=79c70a09&t=${entry.value}`;
     let x=await fetch(call);
     return await x.json();
 }
@@ -32,4 +32,5 @@ let work=()=>{
         showresult.innerHTML="some error";
     })
 }
+
 btn.addEventListener("click",()=>work());
